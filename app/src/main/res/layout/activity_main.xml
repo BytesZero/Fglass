@@ -36,5 +36,6 @@
             android:text="是否进行高斯模糊"
             android:textColor="@android:color/white"
             android:padding="20dp"/>
+
     </LinearLayout>
 </FrameLayout>

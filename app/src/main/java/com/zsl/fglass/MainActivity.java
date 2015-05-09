@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -46,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 long startMs = System.currentTimeMillis();
                 if (isChecked) {
+                    //设置高斯模糊
                     blur(image, text, 3, 9);
                 }else{
                     text.setBackgroundColor(Color.parseColor("#00ffffff"));
