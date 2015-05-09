@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 long startMs = System.currentTimeMillis();
                 if (isChecked) {
                     //设置高斯模糊
-                    blur(image, text, 3, 9);
+                    blur(image, text, 2, 8);
                 } else {
                     text.setBackgroundColor(Color.parseColor("#00ffffff"));
                 }
