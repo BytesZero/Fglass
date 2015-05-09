@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.zsl.fglass.utils.FastBlur.blur;
+import static com.zsl.fglass.utils.Fglass.blur;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 if (isChecked) {
                     //设置高斯模糊
                     blur(image, text, 3, 9);
-                }else{
+                } else {
                     text.setBackgroundColor(Color.parseColor("#00ffffff"));
                 }
                 statusText.setText(System.currentTimeMillis() - startMs + "ms");

@@ -7,12 +7,12 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.view.View;
-import android.widget.TextView;
 
 /**
+ * 设置高斯模糊的工具类
  * Created by zsl on 15/5/9.
  */
-public class FastBlur {
+public class Fglass {
 
     /**
      * 设置高斯模糊
@@ -45,7 +45,7 @@ public class FastBlur {
         paint.setFlags(Paint.FILTER_BITMAP_FLAG);
         canvas.drawBitmap(bkg, 0, 0, paint);
 
-        overlay = FastBlur.doBlur(overlay, (int)radius, true);
+        overlay = Fglass.doBlur(overlay, (int) radius, true);
         toView.setBackground(new BitmapDrawable(overlay));
 
     }
