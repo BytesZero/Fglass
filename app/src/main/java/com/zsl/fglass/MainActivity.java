@@ -44,11 +44,13 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                long startMs = System.currentTimeMillis();
                 if (isChecked) {
-                    blur(image, text, 3, 8, statusText);
+                    blur(image, text, 3, 9);
                 }else{
                     text.setBackgroundColor(Color.parseColor("#00ffffff"));
                 }
+                statusText.setText(System.currentTimeMillis() - startMs + "ms");
             }
         });
     }

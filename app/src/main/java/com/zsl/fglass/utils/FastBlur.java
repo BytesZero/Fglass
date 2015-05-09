@@ -23,18 +23,14 @@ public class FastBlur {
      * @param toView 高斯模糊设置到某个View上
      * @param radius 模糊度
      * @param scaleFactor 缩放比例
-     * @param textView 测试TextView
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    public static void blur(View fromView, View toView,float radius,float scaleFactor,TextView textView) {
+    public static void blur(View fromView, View toView,float radius,float scaleFactor) {
 
         //获取View的截图
         fromView.buildDrawingCache();
         Bitmap bkg = fromView.getDrawingCache();
 
-
-
-        long startMs = System.currentTimeMillis();
         if (radius<1||radius>26) {
             scaleFactor = 8;
             radius = 2;
@@ -51,7 +47,6 @@ public class FastBlur {
 
         overlay = FastBlur.doBlur(overlay, (int)radius, true);
         toView.setBackground(new BitmapDrawable(overlay));
-        textView.setText(System.currentTimeMillis() - startMs + "ms");
 
     }
 

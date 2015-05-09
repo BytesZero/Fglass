@@ -17,7 +17,8 @@
         android:layout_gravity="center_vertical"
         android:gravity="center"
         android:layout_marginTop="100dp"
-        android:text="My super text"
+        android:text="My Fglass is fast"
+        android:textColor="@android:color/white"
         android:textSize="48sp"
         android:textStyle="bold" />
 
