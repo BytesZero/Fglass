@@ -6,6 +6,8 @@ Frosted glass（毛玻璃效果），在网上搜索了许多但是执行的效�
 
 ###使用
  1.copy ```com.zsl.fglass.utils.Fglass```到你的项目中
+ 
+ 
  2.调用
  ```java
  Fglass.blur(image, text, 2, 8);
